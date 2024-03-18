@@ -25,9 +25,9 @@ body {
   flex-direction: column;
   z-index: 2;
   background: linear-gradient(
-  48.76deg,
-  rgb(254, 175, 0) 19.353%,
-  rgb(248, 212, 66) 90.115%
+    48.76deg,
+    rgb(254, 175, 0) 19.353%,
+    rgb(248, 212, 66) 90.115%
   );
 }
 .login-padge__content {
@@ -111,7 +111,7 @@ body {
   width: 100%;
   height: 44px;
   display: inline-block;
-  
+
   background-color: #feaf00;
   color: #fff;
   font-size: 14px;
@@ -269,7 +269,7 @@ body {
   transform: translateY(-50%);
   width: 4px;
   height: 100%;
-  
+
   background-color: #f8d442;
 }
 .sidebar__user-wrapper {
@@ -345,7 +345,7 @@ body {
   top: 50%;
   left: 40px;
   transform: translateY(-50%);
-  
+
   width: 20px;
   height: 16px;
   background-image: url(../images/icons/graduation-cap-icon.svg);
@@ -453,10 +453,11 @@ thead {
   color: #acacac;
   border-top: 1px solid #e5e5e5;
 }
-thead th , .thead-th{
+thead th,
+.thead-th {
   padding: 22px 0px 22px;
 }
-thead tr{
+thead tr {
   text-align: left;
   font-size: 12px;
 }
@@ -467,22 +468,20 @@ tbody tr {
 }
 /* students-list end */
 
-
-.thead-th{
+.thead-th {
   padding: 22px 0 22px;
 }
-.td-img{
+.td-img {
   width: 40px;
   height: 40px;
   margin: auto;
 }
-.td-text{
+.td-text {
   text-align: center;
   padding: 1px;
 }
 
-
-.modal-wrapper{
+.modal-wrapper {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -491,36 +490,45 @@ tbody tr {
   backdrop-filter: blur(10px);
   display: none;
 }
-.modal{
-  width: 50%;
-  padding: 20px;
-  background-color: lightblue;
-  border-radius: 20px;
-  margin: 10px auto;
-}
-.open-modal{
+.open-modal {
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   backdrop-filter: blur(10px);
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.img-div{
-  width: 80%;
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: auto;
-    background: #fff;
+.modal {
+  width: 500px;
 }
-.render-img{
+.add-form {
+  padding: 20px;
   width: 100%;
   height: 100%;
-  border-radius: 50px;
-  height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #fff;
+  border-radius: 5px;
 }
-.form2-div{
+.img-div {
+  margin-bottom: 20px;
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+  overflow: hidden;
+}
+.render-img {
+  width: 100%;
+  height: 100%;
+}
+.form2-div {
   padding: 3px;
   margin-top: 5px;
   background: #fff;
@@ -529,22 +537,29 @@ tbody tr {
   gap: 20px;
 }
 
-.label-of-form{
-  display: flex;
-  flex-direction: column;
-}
-.label-input{
+.label-of-form {
   width: 100%;
+}
+
+.label-of-form span {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.label-input {
+  width: 100%;
+  height: 40px;
   padding: 5px;
-  border: 1px solid black;
+  border: 1px solid #6c6c6c;
   border-radius: 6px;
 }
-.modal-btn{
+.modal-btn {
+  display: inline-block;
   color: #fff;
   width: 100%;
   background-color: #feaf00;
-  margin-top: 5px;
-  padding: 5px;
+  margin-top: 20px;
+  padding: 10px;
   border-radius: 6px;
   outline: none;
   cursor: pointer;
@@ -556,9 +571,9 @@ tbody tr {
   color: #feaf00;
   border: 2px solid #feaf00;
 }
-.update-student{
+.update-student {
   cursor: pointer;
 }
-.delete-student{
+.delete-student {
   cursor: pointer;
 }

@@ -82,13 +82,13 @@ function renderStudents() {
 function addStudent(student) {
   students.push(student);
   localStorage.setItem("students", JSON.stringify(students));
-  renderStudents(); 
+  renderStudents(); // Malumotlarni qayta yuklaymiz
 }
 
 function deleteStudent(email) {
   students = students.filter(student => student.email !== email);
   localStorage.setItem("students", JSON.stringify(students));
-  renderStudents(); 
+  renderStudents(); // Malumotlarni qayta yuklaymiz
 }
 function updateStudent(email){
   elModalWrapper.classList.add("open-modal");
@@ -188,7 +188,6 @@ addBtn.addEventListener("click", function() {
 
   elModal.innerHTML = `
     <form class="add-form">
-      <label>
         <div class="img-div">
           <img class="render-img" src="../images/sidebar/user-img.jpeg" alt="" width="100%" height="100%"/>
         </div>
@@ -214,7 +213,6 @@ addBtn.addEventListener("click", function() {
         <label class="label-of-form">
           <span class="">Enter data admission</span>
           <input class="label-input" type="text" placeholder="Enter data admission" name="admissionDate"/>
-        </label>
         <button type="submit" class="modal-btn">Добавить</button>
       </div>
     </form>
@@ -223,7 +221,7 @@ addBtn.addEventListener("click", function() {
   const addForm = document.querySelector('.add-form');
 
   addForm.addEventListener('submit', function(event) {
-    event.preventDefault(); 
+    event.preventDefault(); // Boshqa sahifaga o'tkazishni to'xtatish
 
     const formData = new FormData(addForm);
 
